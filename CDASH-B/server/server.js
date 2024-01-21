@@ -15,6 +15,9 @@ app.get('/api/crypto-data', async (req, res) => {
       headers: {
         'X-CMC_PRO_API_KEY': '3d9aa2c3-4972-4ec7-8498-3966a9fa405d',
       },
+      params: {
+        limit: 4, // Pass the cryptocurrencyId as a parameter to the API
+      },
     });
 
     const jsonData = response.data;

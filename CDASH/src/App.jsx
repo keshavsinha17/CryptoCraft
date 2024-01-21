@@ -9,7 +9,7 @@ const App = () => {
       try {
         const response = await axios.get('http://localhost:5000/api/crypto-data');
         setCryptoData(response.data);
-        console.log(cryptoData)
+        console.log(cryptoData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -17,6 +17,7 @@ const App = () => {
 
     fetchData();
   }, []);
+  
 
   return (
     <div>
@@ -24,6 +25,7 @@ const App = () => {
       {cryptoData && (
         <pre>{JSON.stringify(cryptoData, null, 2)}</pre>
       )}
+      
     </div>
   );
 };
